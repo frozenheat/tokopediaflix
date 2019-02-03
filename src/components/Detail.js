@@ -21,26 +21,42 @@ class Detail extends Component{
 
 	componentDidMount(){
 		var parent = this;
-
 		parent.props.detailMovie(parent.props.match.params.movieSlug);
 		parent.props.similiarMovie(parent.props.match.params.movieSlug);
 		parent.props.recommendMovie(parent.props.match.params.movieSlug);
 	}
 
 	shouldComponentUpdate(nextProps,nextState){
-		let checkState = false;
+		let checkState = true;
 
 		if(nextProps.movie !== this.props.movie){
 			this.moviesCheck(this.props.myMovies,nextProps.movie.id);
 			checkState=true;
 		}
 
-		if(nextProps.match.url !== this.props.url){
+		if(nextProps.match.url !== this.props.match.url){
+			checkState=true;
+		}
+
+		if(nextProps.similiarMovies !== this.props.similiarMovies){
+			checkState=true;
+		}
+
+		if(nextProps.recommendationMovies !== this.props.recommendationMovies){
 			checkState=true;
 		}
 
 		return checkState;
 	}
+
+	componentDidUpdate(prevProps, prevState, prevContex){
+		if(prevProps.match.url !== this.props.match.url){
+			this.props.detailMovie(this.props.match.params.movieSlug);
+			this.props.similiarMovie(this.props.match.params.movieSlug);
+			this.props.recommendMovie(this.props.match.params.movieSlug);
+		}
+	}
+
 
 
 	buyAction(price,movieId,e){

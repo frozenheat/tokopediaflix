@@ -8,10 +8,6 @@ import { fetchMovies } from '../redux/actions/movieActions';
 
 class Home extends Component{
 
-	constructor(props){
-		super(props);
-	}
-
 
 	componentDidMount(){
 		const page = this.props.location.search?this.props.location.search:"?page=1";
