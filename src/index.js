@@ -1,12 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import {BrowserRouter, Route, Switch} from "react-router-dom";
+import Home from './components/Home.js';
+import Detail from './components/Detail.js';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+import Header from './Header';
+
+import {Provider} from 'react-redux';
+import store from './redux/stores/store';
+
+import './assets/css/bootstrap.min.css';
+import './assets/css/custom.css';
+
+ReactDOM.render(
+	<BrowserRouter>
+		<Provider store={store}>
+			<div className="page-wrapper">
+				<Header/>
+				<div className="body">
+					<Switch>
+						<Route path="/" component={Home} exact/>
+						<Route path="/detail/:movieSlug" component={Detail}/>
+						<Route  component = {Error}/>
+					</Switch>
+				</div>
+			</div>
+		</Provider>
+	</BrowserRouter>
+	, document.getElementById('root'));

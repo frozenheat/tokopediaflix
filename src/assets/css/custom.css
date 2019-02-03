@@ -1,0 +1,71 @@
+.wrapper{display:block; margin:0 auto; max-width:1110px; width:100%;}
+.clear{clear:both;}
+ul{margin:0;}
+body{margin:0;}
+.body{display:inline-block; width:100%; margin-top:80px; padding:30px 0;}
+hr{display:inline-block; height:1px; width:100%; background-color:#000;}
+
+
+/* header */
+header .sticky-header{display:inline-block; width:100%; background-color:#000; position:fixed; top:0; left:0; z-index:9999;}
+header .sticky-header a.logo{color:#fd0e0e; font-size:32px; float:left; font-weight:700;margin:15px 0; letter-spacing:2px;} 
+header .sticky-header a.logo:hover{color:#fd0e0e; text-decoration:none;}
+header .sticky-header .saldo{float:right; display:inline-block; font-size:19px; margin-top:31px; color:#fff;}
+
+/* Home */
+
+.body .wrapper.home ul.trending-list{padding:0; list-style-type:none;}
+.body .wrapper.home ul.trending-list>li{height:auto; margin-bottom:30px;}
+.body .wrapper.home ul.trending-list>li .box-wrapper{display:inline-block; width:100%; height:275px; position:relative; border-radius:12px; overflow:hidden;}
+.body .wrapper.home ul.trending-list>li .box-wrapper a.overlay{display:inline-block; width:100%; height:100%; top:0; left:0; background-color:rgba(0,0,0,0.6); position:absolute; opacity:0;  transition: opacity .25s ease-in-out; -moz-transition: opacity .25s ease-in-out; -webkit-transition: opacity .25s ease-in-out;}
+.body .wrapper.home ul.trending-list>li .box-wrapper:hover a.overlay{opacity: 1; }
+.body .wrapper.home ul.trending-list>li .box-wrapper a.overlay h3.title{font-size:18px; width:70%; position:absolute; top:10px; left:10px; color:#fff;}
+.body .wrapper.home ul.trending-list>li .box-wrapper a.overlay .stars{display:inline-block; width:85px; height:19px; position:absolute; bottom:10px; left:10px; background:url('./images/stars-sprite.png');}
+.body .wrapper.home ul.trending-list>li .box-wrapper a.overlay p.price{position:absolute; right:10px; bottom:10px; margin-bottom:0; line-height:1; font-size:18px; color:#fff;}
+.body .wrapper.home ul.trending-list>li .box-wrapper a.overlay p.buyed{font-size:18px; font-weight:700;  position:absolute; top:5px; right:10px; color:#6fc574; display:none;}
+.body .wrapper.home .pagination{display:inline-block; width:100%; height:auto; text-align:center; margin:60px 0;}
+.body .wrapper.home .pagination ul.pagination-number{margin:0; display:inline-block; list-style-type:none;}
+.body .wrapper.home .pagination ul.pagination-number>li{display:inline-block; float:left; }
+.body .wrapper.home .pagination ul.pagination-number>li a{color:#000; font-size:14px; text-decoration:none; padding:5px;}
+.body .wrapper.home .pagination ul.pagination-number>li a.active{font-weight:700;}
+.body .wrapper.home .pagination ul.pagination-number>li a:hover{text-decoration:none}
+.body .wrapper.home .pagination ul.pagination-number>li a.prevSection,.body .wrapper .pagination ul.pagination-number>li a.nextSection{letter-spacing:-4px;}
+
+
+/* Detail Page */
+
+
+.body .wrapper.detail-page .detail-desc .image-placeholder{display:inline-block; width:100%; height:470px; box-shadow: 0 0 3px 0 #888888;}
+.body .wrapper.detail-page .detail-desc .desc{position:relative;}
+.body .wrapper.detail-page .detail-desc .desc p.price{position:absolute; top:0; right:10px; font-size:32px; color:#000; line-height:1;}
+.body .wrapper.detail-page .detail-desc .desc h2.title{font-size:32px; line-height:1; margin-bottom:20px;  width:60%;}
+.body .wrapper.detail-page .detail-desc .desc .rating-stars{display:inline-block; width:85px; height:19px; background:url('./images/stars-sprite.png');}
+.body .wrapper.detail-page .detail-desc .desc ul.genre{list-style-type:none; margin:0 0 5px; padding:0;}
+.body .wrapper.detail-page .detail-desc .desc ul.genre>li{float:left; display:inline-block;}
+.body .wrapper.detail-page .detail-desc .desc ul.genre>li i{font-style:italic;}
+.body .wrapper.detail-page .detail-desc .desc button.buy{display:inline-block; color:#fff; background-color:#6fc574; font-size:18px; padding:6px 22px; border-radius:6px; cursor:pointer; border:none;}
+.body .wrapper.detail-page .detail-desc .desc button.buyed{display:inline-block; color:#fff; background-color:#cccccc; font-size:18px; padding:6px 22px; border-radius:6px; border:none;}
+.body .wrapper.detail-page .detail-desc .desc p.synopsis{line-height:22px; font-size:18px; text-align: justify;}
+.body .wrapper.detail-page .detail-desc .desc h3.recommended-title{font-size:22px; line-height:1; margin-bottom:10px; }
+
+.body .wrapper.detail-page .detail-desc .desc ul.recommendationMoviesListSection{padding:0; list-style-type:none;}
+.body .wrapper.detail-page .detail-desc .desc ul.recommendationMoviesListSection>li{height:auto; margin-bottom:30px;}
+.body .wrapper.detail-page .detail-desc .desc ul.recommendationMoviesListSection>li .box-wrapper{display:inline-block; width:100%; height:150px; position:relative; border-radius:12px; overflow:hidden;}
+.body .wrapper.detail-page .detail-desc .desc ul.recommendationMoviesListSection>li .box-wrapper a.overlay{display:inline-block; width:100%; height:100%; top:0; left:0; background-color:rgba(0,0,0,0.6); position:absolute; opacity:0;  transition: opacity .25s ease-in-out; -moz-transition: opacity .25s ease-in-out; -webkit-transition: opacity .25s ease-in-out;}
+.body .wrapper.detail-page .detail-desc .desc ul.recommendationMoviesListSection>li .box-wrapper:hover a.overlay{opacity: 1; }
+.body .wrapper.detail-page .detail-desc .desc ul.recommendationMoviesListSection>li .box-wrapper a.overlay h3.title{font-size:12px; width:70%; position:absolute; top:10px; left:10px; color:#fff;}
+.body .wrapper.detail-page .detail-desc .desc ul.recommendationMoviesListSection>li .box-wrapper a.overlay .stars{display:inline-block; width:85px; height:19px; position:absolute; bottom:10px; left:10px;}
+.body .wrapper.detail-page .detail-desc .desc ul.recommendationMoviesListSection>li .box-wrapper a.overlay p.price{position:absolute; right:10px; bottom:10px; margin-bottom:0; line-height:1; font-size:12px; color:#fff; display:none;}
+.body .wrapper.detail-page .detail-desc .desc ul.recommendationMoviesListSection>li .box-wrapper a.overlay p.buyed{font-size:12px; font-weight:700;  position:absolute; top:5px; right:10px; color:#6fc574; display:none;}
+
+
+.body .wrapper.detail-page .similiar h2.related-title{font-size:32px; line-height:1; margin-bottom:10px; margin-bottom:20px;}
+.body .wrapper.detail-page .similiar ul.similiar-list{padding:0; list-style-type:none;}
+.body .wrapper.detail-page .similiar ul.similiar-list>li{height:auto; margin-bottom:30px;}
+.body .wrapper.detail-page .similiar ul.similiar-list>li .box-wrapper{display:inline-block; width:100%; height:275px; position:relative; border-radius:12px; overflow:hidden;}
+.body .wrapper.detail-page .similiar ul.similiar-list>li .box-wrapper a.overlay{display:inline-block; width:100%; height:100%; top:0; left:0; background-color:rgba(0,0,0,0.6); position:absolute; opacity:0;  transition: opacity .25s ease-in-out; -moz-transition: opacity .25s ease-in-out; -webkit-transition: opacity .25s ease-in-out;}
+.body .wrapper.detail-page .similiar ul.similiar-list>li .box-wrapper:hover a.overlay{opacity: 1; }
+.body .wrapper.detail-page .similiar ul.similiar-list>li .box-wrapper a.overlay h3.title{font-size:18px; width:70%; position:absolute; top:10px; left:10px; color:#fff;}
+.body .wrapper.detail-page .similiar ul.similiar-list>li .box-wrapper a.overlay .stars{display:inline-block; width:85px; height:19px; position:absolute; bottom:10px; left:10px;}
+.body .wrapper.detail-page .similiar ul.similiar-list>li .box-wrapper a.overlay p.price{position:absolute; right:10px; bottom:10px; margin-bottom:0; line-height:1; font-size:18px; color:#fff;}
+.body .wrapper.detail-page .similiar ul.similiar-list>li .box-wrapper a.overlay p.buyed{font-size:18px; font-weight:700;  position:absolute; top:5px; right:10px; color:#6fc574; display:none;}
