@@ -1,4 +1,13 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Tokopedia FLIX
+
+Mini project for recruitment test from tokopedia
+
+## Requirement
+
+Node v8.11.3
+
+NPM 5.6.0
+
 
 ## Available Scripts
 
